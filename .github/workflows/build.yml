@@ -1,10 +1,10 @@
-name: Test and Deploy
+name: Deploy
 
 on:
     push:
         branches: [ main ]
 jobs:
-  test:
+  build:
     name: Test
     runs-on: ubuntu-latest
 
@@ -15,3 +15,4 @@ jobs:
           node-version: 16.x
       - run: npm ci
       - run: npm test
+  
